@@ -412,24 +412,28 @@ video.pub-img {
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
-  body {
+  .page-wrapper {
     flex-direction: column;
+    max-width: 100%;
   }
 
   .sidebar {
     width: 100%;
+    min-width: unset;
     height: auto;
     position: relative;
     border-right: none;
     border-bottom: 1px solid #e8e8e8;
+    box-shadow: none;
   }
 
   .sidebar-inner {
-    padding: 20px;
+    padding: 20px 16px;
   }
 
   .profile-section {
     display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 16px;
     text-align: left;
@@ -438,24 +442,127 @@ video.pub-img {
   .profile-photo {
     width: 80px;
     height: 80px;
+    min-width: 80px;
     margin: 0;
+  }
+
+  .profile-text {
+    flex: 1;
+  }
+
+  .name {
+    font-size: 18px;
+  }
+
+  .name-cn {
+    font-size: 14px;
+  }
+
+  .title {
+    font-size: 12px;
+  }
+
+  .affiliation {
+    font-size: 12px;
+  }
+
+  .contact-section {
+    padding: 12px 0;
+    margin-bottom: 12px;
+  }
+
+  .contact-section p {
+    font-size: 12px;
+    margin-bottom: 6px;
   }
 
   .sidebar-nav {
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .nav-link {
+    padding: 6px 12px;
+    font-size: 13px;
   }
 
   .main-content {
-    padding: 24px 20px;
+    padding: 20px 16px;
+  }
+
+  .section-title {
+    font-size: 18px;
+    margin-bottom: 14px;
+  }
+
+  .bio-en p, .bio-cn p {
+    font-size: 13px;
+  }
+
+  .bio-cn {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+  .news-item {
+    padding: 6px 10px;
+    font-size: 13px;
+    flex-wrap: wrap;
+  }
+
+  .news-year {
+    font-size: 12px;
+    min-width: 34px;
+  }
+
+  .year-header {
+    font-size: 16px;
+    margin: 20px 0 12px;
   }
 
   .pub-item {
     flex-direction: column;
+    padding: 12px;
+    gap: 12px;
   }
 
   .pub-img-wrap {
     width: 100%;
-    height: 160px;
+    height: auto;
+    max-height: 200px;
+  }
+
+  .pub-img, video.pub-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .pub-title {
+    font-size: 13.5px;
+  }
+
+  .pub-venue {
+    font-size: 12.5px;
+  }
+
+  .pub-authors {
+    font-size: 12px;
+  }
+
+  .pub-links a {
+    font-size: 11px;
+    padding: 2px 8px;
+  }
+
+  .section {
+    margin-bottom: 30px;
+    padding-bottom: 14px;
+  }
+
+  .footer {
+    font-size: 12px;
+    padding: 20px 0 14px;
   }
 }
